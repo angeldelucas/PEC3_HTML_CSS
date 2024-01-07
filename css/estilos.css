@@ -1,11 +1,23 @@
+:root {
+
+    --menu-link-color: rgb(0, 59, 74);
+    --menu-link-color-hover: rgb(191, 12, 240);
+
+    --fotoer-link-color: rgb(255, 255, 255);
+    --fotoer-link-color-hover: rgb(193, 184, 251);
+
+    --background-color-body: rgb(247, 247, 247);
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
 }
 
-/* body{
-    margin: 0;
-} */
+body{
+    /* margin: 0; */
+    background-color: var(--background-color-body);
+}
 /* 
 .header-container {
     border: 1px solid black;
@@ -15,7 +27,7 @@
     display: flex;
     flex: 1;
     justify-content: space-between;
-    padding: 0 2% 0 2%;    
+    padding: 0 2% 0 2%;
 }
 
 .header-menu .menu {
@@ -26,9 +38,16 @@
     text-transform: uppercase;
     padding: 0;
     align-items: center;
+}
+
+.internal-link{
     font-family: 'Lato', sans-serif;
     font-weight: 700;
-    color: rgb(0, 59, 74);
+    color: var(--menu-link-color);
+}
+
+.internal-link:hover{
+    color: var(--menu-link-color-hover);
 }
 
 .header-menu .menu li {
@@ -37,7 +56,7 @@
     text-align: center;
 }
 
-.header-menu .menu li:nth-child(1){
+.header-menu .menu li:nth-child(1) {
     border-right: 2px solid black;
 }
 
@@ -54,13 +73,20 @@
     width: 100%;
     background-color: rgb(0, 59, 74);
     color: white;
-    padding: 20px 0 30px 0;
+    padding: 20px 0 20px 0;
     font-family: 'Lato', sans-serif;
     font-weight: 400;
 }
 
-.copyright{
-    margin: 16px;
+.footer-container div {
+    padding: 0 20px 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.copyright {
+    margin: 16px 0 0 0;
 }
 
 .footer-social-menu {
@@ -75,13 +101,64 @@
     padding: 0;
 }
 
-.footer-legal-menu li{
+.footer-legal-menu li {
     list-style-type: none;
     text-align: center;
-    padding-bottom: 5%;
+    padding-bottom: 5px;
 }
 
-.legal-Link {
-    color: white;
+.social-link:hover{
+    opacity: 0.7;
+}
+
+.legal-link{
     text-decoration-line: none;
+    color: var(--fotoer-link-color);
+}
+
+.legal-link:hover{
+    color: var(--fotoer-link-color-hover);
+}
+
+
+
+/* Dispositivos especialmente pequeños (phones, menores que 768px) */
+/* Estilos principales, ya que es el contexto por defecto en Bootstrap */
+@media (min-width: 768px) {
+
+    /* Dispositivos pequeños (tablets, 768px y superiores) */
+    .footer-container {
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+    }
+
+    .footer-container div:nth-child(1) {
+        align-items: start;
+    }
+
+    .footer-container div:nth-child(2) {
+        align-items: end;
+        align-self: flex-end;
+    }
+
+    .footer-legal-menu {
+        display: flex;
+        width: 450px;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+    }
+
+    .footer-legal-menu li:nth-child(2),
+    .footer-legal-menu li:nth-child(1) {
+        border-right: 2px solid white;
+    }
+}
+
+@media (min-width: 992px) {
+    /* Dispositivos medios (escritorio, 992px y superiores) */
+}
+
+@media (min-width: 1200px) {
+    /* Dispositivos grandes (escritorios grandes, 1200px y superiores) */
 }

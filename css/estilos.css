@@ -72,15 +72,17 @@ body {
 /* Posicionamiento del footer al final de la página. Posicionamiento relativo con respecto al elemento con clase main.
 */
 .footer-container {
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    width: 100%; */
     background-color: rgb(0, 59, 74);
     color: var(--fotoer-link-color);
     padding: 20px 0 20px 0;
     font-family: 'Lato', sans-serif;
     font-weight: 400;
+    font-size: 0.7rem;
+    line-height: 1.5;
 }
 
 /* Distribución de los elementos del footer en dos div para organizar el propio footer de dos modos distintos en función
@@ -91,6 +93,10 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.footer-container img {
+    scale: 0.7;
 }
 
 .copyright {
@@ -268,7 +274,8 @@ h3 {
 
 .text-content-blog {
     /* margin: 0 3% 3% 3%; */
-    margin:  3%;
+    height: 100%;
+    /* margin: 3%; */
     /* padding: 3%; */
     /* background-color: rgb(43, 16, 217); */
     /* background-color: rgb(229, 225, 254); */
@@ -276,6 +283,7 @@ h3 {
     /* display: flex;
     flex-direction: column;
     align-items: end; */
+    border: 1px solid var(--fotoer-link-color-hover);
 }
 
 .text-content-blog p {
@@ -289,6 +297,19 @@ h3 {
 .text-content-blog img,
 .text-content img {
     width: 100%;
+}
+
+.text-content figure {
+    /* position: relative; */
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    margin-bottom: 3%;
+}
+
+.text-content figcaption {
+    font-size: 0.8rem;
+
 }
 
 .text-content-blog figcaption {
@@ -335,6 +356,10 @@ h3 {
     padding: 2%;
 }
 
+.main-blog{
+    padding: 2%;
+}
+
 .main-blog h1 {
     font-family: 'Noto Serif', sans-serif;
     position: relative;
@@ -367,6 +392,28 @@ h3 {
 .article-category-link a:hover {
     cursor: pointer;
     background-color: var(--menu-link-color-hover);
+}
+
+.paginator {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style-type: none;
+    color: var(--menu-link-color);
+    padding: 4% 0 4% 0;
+}
+
+.paginator li {
+    padding: 2%;
+    margin: 1%;
+    border: 1px solid var(--menu-link-color);
+}
+
+.paginator li:nth-child(1) {
+    background-color: var(--menu-link-color-hover);
+    border: none;
+    color: var(--fotoer-link-color);
 }
 
 /* Dispositivos especialmente pequeños (phones, menores que 768px) */
@@ -471,10 +518,39 @@ h3 {
 
     .text-content {
         margin: 4% 0 4% 0;
+        /* padding-bottom: 10%; */
     }
 
     .text-content img {
         width: 100%;
+    }
+
+    .main-blog{
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(2, 49%);
+        gap: 2%;
+        padding-top: 8%;
+        padding-bottom: 18%;
+    }
+
+    .main-blog h1{
+        padding: 2% 0 4% 1.5%;
+        font-size: 3.6vw;
+        width: 100%;
+        position: absolute;
+        top: 0;
+    }
+
+    .paginator{
+        position: absolute;
+        bottom: 0;
+    }
+
+    .paginator li {
+        padding: 1%;
+        /* margin: 1%; */
+        /* border: 1px solid var(--menu-link-color); */
     }
 
     /* .page-content {
@@ -509,14 +585,51 @@ h3 {
         font-size: 1rem;
     } */
 
+    .footer-container {
+        font-size: 0.9rem;
+        /* line-height: 1.5; */
+    }
+
+    .footer-container img {
+        scale: 1;
+    }
+
+    .main-blog{
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 2%;
+        padding-top: 8%;
+        padding-bottom: 18%;
+    }
+
+    .main-blog h1{
+        padding: 2% 0 4% 2%;
+        font-size: 3vw;
+        width: 100%;
+        position: absolute;
+        top: 0;
+    }
+
+    .main-blog section:nth-child(-n+2) {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    
+
+    /* .text-content-blog{
+        scale: 0.8;
+    } */
+
 }
 
 @media (min-width: 1200px) {
 
     /* Dispositivos grandes (escritorios grandes, 1200px y superiores) */
-    .page-content {
+    /* .page-content {
         font-size: 1.1rem;
-    }
+    } */
 }
 
 @media (min-width: 1700px) {
@@ -526,7 +639,7 @@ h3 {
         font-size: 4.5rem;
         width: 45%;
     } */
-    .page-content {
+    /* .page-content {
         font-size: 1.2rem;
-    }
+    } */
 }

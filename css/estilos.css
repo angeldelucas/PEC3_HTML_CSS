@@ -21,11 +21,15 @@ body {
     background-color: var(--background-color-body);
 }
 
+/******************************************************************/
+/*                            HEADER.HTML                         */
+/******************************************************************/
+
 /* Disposición de los elementos des header en los extremos del mismo */
 .header-menu {
     display: flex;
     justify-content: space-between;
-    padding: 1% 2% 0 2%;
+    padding: 1% 1% 1% 1%;
 }
 
 /* Tamaño fijo en el width para que al reducir el tamaño de pantalla no se reduzca el ancho y no se salga de
@@ -40,6 +44,10 @@ body {
     text-transform: uppercase;
     padding: 0;
     align-items: center;
+}
+
+.menu-logo{
+    scale: 0.8;
 }
 
 /* Links del menú de navegación. Estado hover, tipo y tamaño de letra y colores */
@@ -69,13 +77,14 @@ body {
     border-right: 2px solid black;
 }
 
+
+/******************************************************************/
+/*                            FOOTER.HTML                         */
+/******************************************************************/
+
 /* Posicionamiento del footer al final de la página. Posicionamiento relativo con respecto al elemento con clase main.
 */
 .footer-container {
-    /* display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%; */
     background-color: rgb(0, 59, 74);
     color: var(--fotoer-link-color);
     padding: 20px 0 20px 0;
@@ -138,13 +147,16 @@ body {
     color: var(--menu-link-color-hover);
     text-decoration: none;
     border-bottom: 1px dotted var(--menu-link-color-hover);
-    /* padding-bottom: 0.1%; */
 }
 
 .text-empty-link:hover {
     color: rgb(0, 59, 74);
-    /* text-decoration: dotted; */
 }
+
+
+/******************************************************************/
+/*                            INDEX.HTML                          */
+/******************************************************************/
 
 /* Con flex:1 expando el main en todo el espacio disponible así el footer se mantiene siempre en 
    la parte inferior de la pantalla.
@@ -157,19 +169,6 @@ body {
     font-family: 'Lato', sans-serif;
     font-weight: 400;
     color: var(--menu-link-color);
-}
-
-.main-blog {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    align-items: center;
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;
-    color: var(--menu-link-color);
-    /* background-colorgb(49, 22, 230)54) ; */
-    /* background-color: rgb(158, 157, 171); */
-    background-color: rgb(229, 225, 254);
 }
 
 h1 {
@@ -194,10 +193,6 @@ h3 {
     padding: 2% 0 3% 0;
 }
 
-/* .page-content {
-    border: 1px solid black;
-} */
-
 .header-image {
     width: 100%;
     height: 58vh;
@@ -211,7 +206,6 @@ h3 {
 .first-info {
     padding: 5% 2% 2% 2%;
     line-height: 1.5rem;
-    /* text-align: justify; */
 }
 
 .first-info p {
@@ -252,6 +246,7 @@ h3 {
     color: var(--fotoer-link-color);
     text-transform: uppercase;
     text-decoration: none;
+    border: none;
     border-radius: 5px;
     font-size: 0.9rem;
     padding: 2% 4% 2% 4%;
@@ -272,24 +267,6 @@ h3 {
     margin: 6% 0 6% 0;
 }
 
-.text-content-blog {
-    /* margin: 0 3% 3% 3%; */
-    height: 100%;
-    margin-top: 3%;
-    /* padding: 3%; */
-    /* background-color: rgb(43, 16, 217); */
-    /* background-color: rgb(229, 225, 254); */
-    background-color: var(--background-color-body);
-    /* display: flex;
-    flex-direction: column;
-    align-items: end; */
-    border: 1px solid var(--fotoer-link-color-hover);
-}
-
-.text-content-blog p {
-    margin: 0 0 3% 0;
-}
-
 .text-content p {
     margin: 0 0 3% 0;
 }
@@ -300,7 +277,6 @@ h3 {
 }
 
 .text-content figure {
-    /* position: relative; */
     display: flex;
     flex-direction: column;
     align-items: end;
@@ -312,23 +288,58 @@ h3 {
 
 }
 
+
+
+/******************************************************************/
+/*                            BLOG.HTML                           */
+/******************************************************************/
+
+.main-blog {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    color: var(--menu-link-color);
+    background-color: rgb(229, 225, 254);
+}
+
+.main-blog h1 {
+    width: 100%;
+    font-family: 'Noto Serif', sans-serif;
+    position: inherit;
+    font-size: 2rem;
+    margin: 0;
+    padding: 0;
+    margin: 10px 0 10px 20px;
+}
+
+.main-blog h4 {
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: rgb(158, 157, 171);
+}
+
+.text-content-blog {
+    background-color: var(--background-color-body);
+    border: 1px solid var(--fotoer-link-color-hover);
+    margin: 2%;
+}
+
+.text-content-blog p {
+    margin: 0 0 3% 0;
+}
+
 .text-content-blog figcaption {
-
     font-size: 0.5rem;
-
-
     position: absolute;
     bottom: 2%;
-    /* bottom: 0; */
-    /* top: 0; */
     right: 2%;
 }
 
 .author {
     background-color: rgba(229, 225, 254, 0.323);
-
-    /* width: fit-content;
-    height: fit-content; */
     padding: 2px;
 }
 
@@ -342,34 +353,18 @@ h3 {
     display: flex;
     flex-direction: column;
     align-items: end;
-    margin-bottom: 3%;
+    margin-bottom: 2%;
 }
 
 .text-content-blog h3 {
     font-family: 'Noto Serif', sans-serif;
     font-weight: 600;
     font-size: 1.6rem;
-    padding: 2% 0 3% 0;
+    padding: 1% 0 1% 0;
 }
 
 .text-content-blog div {
-    padding: 2%;
-}
-
-.main-blog{
-    padding: 2%;
-}
-
-.main-blog h1 {
-    font-family: 'Noto Serif', sans-serif;
-    position: relative;
-    font-size: 2rem;
-}
-
-.main-blog h4 {
-    font-size: 0.8rem;
-    font-weight: 400;
-    color: rgb(158, 157, 171);
+    padding: 0 2% 2% 2%;
 }
 
 .blog-link {
@@ -395,23 +390,29 @@ h3 {
 }
 
 .paginator {
-    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
     list-style-type: none;
     color: var(--menu-link-color);
-    /* padding: 4rem 0 4rem 0; */
-    padding: 4% 0 4% 0;
+    margin: 20px 0 20px 0;
+    padding: 0;
 }
 
-.paginator li {
-    padding: 2%;
-    margin: 1%;
+.new-page-button {
+    padding: 6px;
+    margin: 4px;
     border: 1px solid var(--menu-link-color);
 }
 
-.paginator li:nth-child(1) {
+.new-page-button:hover{
+    cursor: pointer;
+    background-color: var(--menu-link-color-hover);
+    border: 1px solid var(--menu-link-color-hover);
+    color: var(--fotoer-link-color);
+}
+
+.new-page-button:nth-child(1) {
     background-color: var(--menu-link-color-hover);
     border: none;
     color: var(--fotoer-link-color);
@@ -421,38 +422,13 @@ h3 {
 /* Estilos principales, ya que es el contexto por defecto en Bootstrap */
 @media (min-width: 768px) {
 
-    /* Dispositivos pequeños (tablets, 768px y superiores) */
-    /* .footer-container {
-        display: grid;
-        grid-template-columns: repeat(2, 50%);
+    .menu-logo{
+        scale: 1;
     }
 
-    .footer-container div:nth-child(1) {
-        align-items: start;
-    }
-
-    .footer-container div:nth-child(2) {
-        align-items: end;
-        align-self: flex-end;
-    }
-
-    .footer-legal-menu {
-        display: flex;
-        width: 450px;
-        height: auto;
-        display: grid;
-        grid-template-columns: repeat(3, auto);
-    }
-
-    .footer-legal-menu li:nth-child(2),
-    .footer-legal-menu li:nth-child(1) {
-        border-right: 2px solid white;
-    } */
-
-    /* h1 {
-        font-size: 3.6vw;
-        width: 45%;
-    } */
+    /******************************************************************/
+    /*                            INDEX.HTML                          */
+    /******************************************************************/
 
     h2 {
         position: absolute;
@@ -469,11 +445,6 @@ h3 {
 
     .first-info {
         position: relative;
-        /* display: flex;
-        display: grid;
-        grid-template-columns: 46% 52%;
-        gap: 4%;
-        width: 60%; */
     }
 
     .second-info {
@@ -519,54 +490,49 @@ h3 {
 
     .text-content {
         margin: 4% 0 4% 0;
-        /* padding-bottom: 10%; */
     }
 
     .text-content img {
         width: 100%;
     }
 
-    .main-blog{
-        position: relative;
+    /******************************************************************/
+    /*                            BLOG.HTML                          */
+    /******************************************************************/
+
+    .grid-news {
         display: grid;
         grid-template-columns: repeat(2, 49%);
-        gap: 2%;
-        padding-top: 8%;
-        padding-bottom: 28%;
     }
 
-    .main-blog h1{
-        padding: 2% 0 4% 1.5%;
-        font-size: 3.6vw;
-        width: 100%;
-        position: absolute;
-        top: 0;
-    }
-
-    .paginator{
-        position: absolute;
-        bottom: 0;
+    .main-blog h1 {
+        font-size: 4vw;
     }
 
     .paginator li {
-        padding: 1%;
-        /* margin: 1%; */
-        /* border: 1px solid var(--menu-link-color); */
+        width: 32px;
+        height: 42px;
+        padding: 10px;
+        margin: 8px;
+        border: 1px solid var(--menu-link-color);
     }
-
-    /* .page-content {
-        font-size: 1rem;
-    } */
-
 
 }
 
 @media (min-width: 992px) {
     /* Dispositivos medios (escritorio, 992px y superiores) */
 
+    /******************************************************************/
+    /*                            FOOTER.HTML                         */
+    /******************************************************************/
     .footer-container {
         display: grid;
         grid-template-columns: repeat(2, 50%);
+        font-size: 0.9rem;
+    }
+
+    .footer-container img {
+        scale: 1;
     }
 
     .footer-container div:nth-child(1) {
@@ -591,6 +557,10 @@ h3 {
         border-right: 2px solid white;
     }
 
+
+    /******************************************************************/
+    /*                            INDEX.HTML                          */
+    /******************************************************************/
     .first-info {
         position: relative;
         display: grid;
@@ -607,79 +577,42 @@ h3 {
         font-size: 3.6vw;
         width: 45%;
         margin-right: 16%;
-    }
+    }    
 
-    /* .page-content {
-        font-size: 1rem;
-    } */
+    /******************************************************************/
+    /*                            BLOG.HTML                           */
+    /******************************************************************/
 
-    .footer-container {
-        font-size: 0.9rem;
-        /* line-height: 1.5; */
-    }
-
-    .footer-container img {
-        scale: 1;
-    }
-
-    .main-blog{
-        position: relative;
+    .grid-news {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        gap: 2%;
-        padding-top: 8%;
-        padding-bottom: 12%;
-        /* padding-bottom: 35px; */
     }
 
-    .main-blog h1{
-        padding: 2% 0 4% 2%;
+    .main-blog {
+        padding-left: 1%;
+        padding-right: 1%;
+    }
+
+    .main-blog h1 {
         font-size: 3vw;
-        width: 100%;
-        position: absolute;
-        top: 0;
     }
 
-    .main-blog section:nth-child(-n+2) {
+    .grid-news section:nth-child(-n+1) {
         grid-column-start: 1;
         grid-column-end: 3;
     }
-
-    .paginator {
-        /* width: 100%;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        list-style-type: none;
-        color: var(--menu-link-color); */
-        /* padding: 4rem 0 4rem 0; */
-        padding: 40px 0 40px 0;
-    }
-
     
-
-    /* .text-content-blog{
-        scale: 0.8;
-    } */
-
+    .grid-news section:nth-child(-n+1):nth-child(-n+1) {
+        margin: 1%;
+    }
 }
 
 @media (min-width: 1200px) {
 
     /* Dispositivos grandes (escritorios grandes, 1200px y superiores) */
-    /* .page-content {
-        font-size: 1.1rem;
-    } */
 }
 
 @media (min-width: 1700px) {
 
     /* Dispositivos muy grandes (escritorios grandes, 1700px y superiores) */
-    /* h1 {
-        font-size: 4.5rem;
-        width: 45%;
-    } */
-    /* .page-content {
-        font-size: 1.2rem;
-    } */
 }

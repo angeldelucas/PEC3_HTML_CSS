@@ -581,6 +581,7 @@ blockquote cite{
     font-weight: 400;
     color: var(--menu-link-color);
     background-color: var(--background-color-body);
+    padding-bottom: 6%;
 }
 
 .videos-main h1 {
@@ -613,10 +614,6 @@ blockquote cite{
 .video-description{
     padding: 2%;
     line-height: 1.5;
-}
-
-.videos-main{
-    margin-bottom: 6%;
 }
 
 

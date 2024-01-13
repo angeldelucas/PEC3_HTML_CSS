@@ -18,7 +18,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: var(--background-color-body);
+    background-color: var(--fotoer-link-color);
 }
 
 /******************************************************************/
@@ -57,6 +57,7 @@ body {
     color: var(--menu-link-color);
 }
 
+.internal-link.selected,
 .internal-link:hover {
     color: var(--menu-link-color-hover);
 }
@@ -302,7 +303,8 @@ h3 {
     font-weight: 400;
     color: var(--menu-link-color);
     /* background-color: rgb(229, 225, 254); */
-    background-color: rgb(239, 239, 244);
+    /* background-color: rgb(239, 239, 244); */
+    background-color: var(--background-color-body);
 }
 
 .main-blog h1 {
@@ -425,7 +427,8 @@ h3 {
     font-family: 'Lato', sans-serif;
     font-weight: 400;
     color: var(--menu-link-color);    
-    background-color: rgb(239, 239, 244);
+    /* background-color: rgb(239, 239, 244); */
+    background-color: var(--background-color-body);
     padding-top: 30px;
 }
 
@@ -440,11 +443,6 @@ h3 {
     padding: 2px;
 }
 
-.breadcrumbs a{
-    text-decoration: none;
-    color: var(--menu-link-color);
-}
-
 .breadcrumbs li:after {
     content: " > ";
 }
@@ -452,6 +450,16 @@ h3 {
 .breadcrumbs li:nth-last-child(1):after {
     content: "";
     background-color: brown;
+}
+
+.breadcrumb-link{
+    text-decoration: none;
+    color: var(--menu-link-color);
+}
+
+.breadcrumb-link.selected,
+.breadcrumb-link:hover{
+    font-weight: 600;
 }
 
 .input-blog {
@@ -500,28 +508,32 @@ h3 {
 .input-intro{
     font-size: 1.3rem;
     font-weight: 600;
-    /* margin-bottom: 3%; */
     margin-top: 1rem;
 }
 
+.input-blog li,
 .input-blog ul{
-    /* margin-top: 3%; */
     margin-top: 1rem;
 }
 
-.input-blog li{
+/* .input-blog li{
     margin-top: 1rem;
-    /* margin-top: 3%; */
-}
+} */
 
-.cite{
-    /* margin-top: 3%; */
+blockquote{
+    margin: 3% 0 3% 8%;
     padding-left: 40px;
     border-left: 3px solid var(--menu-link-color-hover);
 }
 
-.cite p{
-    margin-top: 1rem;
+blockquote p{
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+blockquote cite{
+    font-size: 0.8rem;
 }
 
 .categories-list{
@@ -556,6 +568,58 @@ h3 {
     border: 1px solid var(--menu-link-color-hover);
     background-color: var(--menu-link-color-hover);
 }
+
+    /******************************************************************/
+    /*                            VIDEOS.HTML                          */
+    /******************************************************************/
+.videos-main{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    color: var(--menu-link-color);
+    background-color: var(--background-color-body);
+}
+
+.videos-main h1 {
+    width: 100%;
+    font-family: 'Noto Serif', sans-serif;
+    position: inherit;
+    font-size: 2rem;
+    margin: 0;
+    padding: 10px 0 10px 10px;
+}
+
+.container-video{
+
+    background-color: var(--fotoer-link-color);
+    border: 1px solid var(--fotoer-link-color-hover);
+    margin: 2%;
+}
+
+.videos-main h2{
+    font-size: 1.6rem;
+}
+
+.iframe-video{
+    width: 100%;
+    /* height: 260px; */
+    height: 250px;
+    border: none;
+}
+
+.video-description{
+    padding: 2%;
+    line-height: 1.5;
+}
+
+.videos-main{
+    margin-bottom: 6%;
+}
+
+
 
 
 /* Dispositivos especialmente pequeños (phones, menores que 768px) */
@@ -696,6 +760,11 @@ h3 {
         grid-row-end: 3; */
     }
 
+    .grid-videos{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
 }
 
 @media (min-width: 992px) {
@@ -786,7 +855,7 @@ h3 {
     }
 
     /******************************************************************/
-    /*                            ENTRADA.HTML                           */
+    /*                            ENTRADA.HTML                        */
     /******************************************************************/
 
     .input-main{
@@ -827,6 +896,19 @@ h3 {
     .recents-articles {
         display: flex;
         flex-direction: column;
+    }
+
+    /******************************************************************/
+    /*                            VIDEOS.HTML                        */
+    /******************************************************************/
+    
+    .videos-main h1 {
+        font-size: 3vw;
+    }
+
+    .grid-videos{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }
 

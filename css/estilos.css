@@ -401,17 +401,19 @@ h3 {
     border: 1px solid var(--menu-link-color);
 }
 
+.new-page-button a{
+    text-decoration: none;
+    color: var(--menu-link-color);
+}
+
+.new-page-button.selected a,
+.new-page-button.selected, 
+.new-page-button:hover a,
 .new-page-button:hover {
     cursor: pointer;
     background-color: var(--menu-link-color-hover);
     border: 1px solid var(--menu-link-color-hover);
-    color: var(--fotoer-link-color);
-}
-
-.new-page-button:nth-child(1) {
-    background-color: var(--menu-link-color-hover);
-    border: none;
-    color: var(--fotoer-link-color);
+    color: var(--background-color-body);
 }
 
 /******************************************************************/
@@ -484,7 +486,6 @@ h3 {
 .recents-articles h3 {
     font-size: 1.3rem;
 }
-
 
 .input-header h4 {
     width: 100%;
@@ -599,7 +600,7 @@ blockquote cite {
 
 .iframe-video {
     width: 100%;
-    height: 250px;
+    height: 35vh;
     border: none;
 }
 

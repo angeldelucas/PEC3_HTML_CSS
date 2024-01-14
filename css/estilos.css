@@ -552,7 +552,7 @@ blockquote cite {
     width: 100%;
     display: flex;
     list-style-type: none;
-    padding: 10px;
+    padding: 1%;
     margin-bottom: 20px;
 }
 
@@ -695,15 +695,8 @@ blockquote cite {
     }
 
     /******************************************************************/
-    /*                            ENTRADA.HTML                          */
+    /*                            ENTRADA.HTML                        */
     /******************************************************************/
-
-    /* .input-main {
-        display: flex;
-        flex: 1;
-        flex-direction: column;
-        align-items: center;
-    } */
 
     .recents-articles {
         padding-top: 60px;
@@ -719,13 +712,8 @@ blockquote cite {
     }
 
     .categories-list {
-        /* position: relative;
-        bottom: 0; */
         grid-column-start: 1;
         grid-column-end: 3;
-
-        /* grid-row-start: 2;
-        grid-row-end: 3; */
     }
 
     .grid-videos {
@@ -778,7 +766,6 @@ blockquote cite {
     /*                            INDEX.HTML                          */
     /******************************************************************/
     .first-info {
-        /* position: relative; */
         display: grid;
         grid-template-columns: 46% 52%;
         gap: 4%;
@@ -786,17 +773,15 @@ blockquote cite {
     }
 
     .text-intro h2 {
-        /* position: absolute; */
         font-size: 2.8vw;
-        /* top: 0; */
     }
 
     .second-info {
         padding: 2% 20% 2% 20%;
     }
 
-    h1 {
-        font-size: 3.6vw;
+    .main h1 {
+        /* font-size: 3.6vw; */
         width: 45%;
         margin-right: 16%;
     }
@@ -857,7 +842,6 @@ blockquote cite {
     }
 
     .recents-articles h2 {
-        /* font-size: 1.6rem; */
         width: 100%;
         position: relative;
     }
@@ -884,17 +868,4 @@ blockquote cite {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
     }
-}
-
-@media (min-width: 1200px) {
-
-    /* Dispositivos grandes (escritorios grandes, 1200px y superiores) */
-    /* .recents-articles h2{
-        font-size: 2.2rem;
-    } */
-}
-
-@media (min-width: 1700px) {
-
-    /* Dispositivos muy grandes (escritorios grandes, 1700px y superiores) */
 }

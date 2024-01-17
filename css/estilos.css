@@ -319,8 +319,7 @@ h3 {
 
 .text-content-blog {
     position: relative;
-    background-color: var(--background-color-body);
-    border: 1px solid var(--text-color-white-hover);
+    background-color: var(--text-color-white);
     margin: 2%;
 }
 
@@ -805,12 +804,12 @@ blockquote cite {
         font-size: 3vw;
     }
 
-    .grid-news section:nth-child(-n+1) {
+    .grid-news article:nth-child(-n+1) {
         grid-column-start: 1;
         grid-column-end: 3;
     }
 
-    .grid-news section:nth-child(-n+1):nth-child(-n+1) {
+    .grid-news article:nth-child(-n+1):nth-child(-n+1) {
         margin: 1%;
     }
 

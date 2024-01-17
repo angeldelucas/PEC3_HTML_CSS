@@ -1,20 +1,12 @@
 :root {
 
-    /* --text-color-footer-bacground: rgb(0, 59, 74); */
-    --text-color-footer-bacground: rgb(0, 59, 74);
+    --menu-link-color: rgb(0, 59, 74);
+    --menu-link-color-hover: rgb(191, 12, 240);
 
-    /* --contrast-color: rgb(191, 12, 240); */
-    --contrast-color: rgb(191, 12, 240);
-    --contrast-color-light: rgb(229, 225, 254);
+    --fotoer-link-color: rgb(255, 255, 255);
+    --fotoer-link-color-hover: rgb(193, 184, 251);
 
-    /* --text-color-white: rgb(255, 255, 255); */
-    --text-color-white: rgb(255, 255, 255);
-    --text-color-gray: rgb(158, 157, 171);
-
-    
     --background-color-body: rgb(247, 247, 247);
-    
-    
 }
 
 * {
@@ -26,7 +18,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: var(--text-color-white);
+    background-color: var(--fotoer-link-color);
 }
 
 /******************************************************************/
@@ -62,12 +54,12 @@ body {
 .internal-link {
     font-family: 'Lato', sans-serif;
     font-weight: 700;
-    color: var(--text-color-footer-bacground);
+    color: var(--menu-link-color);
 }
 
 .internal-link.selected,
 .internal-link:hover {
-    color: var(--contrast-color);
+    color: var(--menu-link-color-hover);
 }
 
 /* Elementos del menú de navegación del header BLOG | VIDEO sin subrayadao y centrados en la columna del grid*/
@@ -95,7 +87,7 @@ body {
 */
 .footer-container {
     background-color: rgb(0, 59, 74);
-    color: var(--text-color-white);
+    color: var(--fotoer-link-color);
     padding: 20px 0 20px 0;
     font-family: 'Lato', sans-serif;
     font-weight: 400;
@@ -145,17 +137,17 @@ body {
 
 .legal-link {
     text-decoration-line: none;
-    color: var(--text-color-white);
+    color: var(--fotoer-link-color);
 }
 
 .legal-link:hover {
-    color: var(--contrast-color-light);
+    color: var(--fotoer-link-color-hover);
 }
 
 .text-empty-link {
-    color: var(--contrast-color);
+    color: var(--menu-link-color-hover);
     text-decoration: none;
-    border-bottom: 1px dotted var(--contrast-color);
+    border-bottom: 1px dotted var(--menu-link-color-hover);
 }
 
 .text-empty-link:hover {
@@ -173,7 +165,7 @@ body {
 .main {
     font-family: 'Lato', sans-serif;
     font-weight: 400;
-    color: var(--text-color-footer-bacground);
+    color: var(--menu-link-color);
 }
 
 h1 {
@@ -247,8 +239,8 @@ h3 {
 }
 
 .submit-button {
-    background-color: var(--text-color-footer-bacground);
-    color: var(--text-color-white);
+    background-color: var(--menu-link-color);
+    color: var(--fotoer-link-color);
     text-transform: uppercase;
     text-decoration: none;
     border: none;
@@ -259,12 +251,12 @@ h3 {
 
 .submit-button:hover {
     cursor: pointer;
-    background-color: var(--contrast-color);
+    background-color: var(--menu-link-color-hover);
 }
 
 .second-info {
     width: 100%;
-    background-color: var(--contrast-color-light);
+    background-color: rgb(229, 225, 254);
     padding: 3%;
 }
 
@@ -308,7 +300,7 @@ h3 {
 .main-blog {
     font-family: 'Lato', sans-serif;
     font-weight: 400;
-    color: var(--text-color-footer-bacground);
+    color: var(--menu-link-color);
     background-color: var(--background-color-body);
 }
 
@@ -324,12 +316,13 @@ h3 {
 .main-blog h4 {
     font-size: 0.8rem;
     font-weight: 400;
-    color: var(--text-color-gray);
+    color: rgb(158, 157, 171);
 }
 
 .text-content-blog {
+    position: relative;
     background-color: var(--background-color-body);
-    border: 1px solid var(--contrast-color-light);
+    border: 1px solid var(--fotoer-link-color-hover);
     margin: 2%;
 }
 
@@ -347,11 +340,6 @@ h3 {
 .author {
     background-color: rgba(229, 225, 254, 0.323);
     padding: 2px;
-}
-
-.article-category-link {
-    top: 5%;
-    left: 2%;
 }
 
 .text-content-blog figure {
@@ -372,25 +360,32 @@ h3 {
 }
 
 .blog-link {
-    color: var(--text-color-footer-bacground);
+    color: var(--menu-link-color);
     text-decoration: none;
 }
 
 .blog-link:hover {
-    color: var(--contrast-color)
+    color: var(--menu-link-color-hover)
 }
 
-.article-category-link a {
-    background-color: var(--text-color-footer-bacground);
-    color: var(--text-color-white);
+.article-category-link {
+    font-size: 0.5rem;
+    position: absolute;
+    top: 2%;
+    left: 2%;
+}
+
+.article-category-link{
+    background-color: var(--menu-link-color);
+    color: var(--fotoer-link-color);
     text-decoration: none;
     font-size: 0.7rem;
     padding: 2%;
 }
 
-.article-category-link a:hover {
+.article-category-link:hover {
     cursor: pointer;
-    background-color: var(--contrast-color);
+    background-color: var(--menu-link-color-hover);
 }
 
 .paginator {
@@ -398,7 +393,7 @@ h3 {
     flex-direction: row;
     justify-content: center;
     list-style-type: none;
-    color: var(--text-color-footer-bacground);
+    color: var(--menu-link-color);
     margin: 20px 0 20px 0;
     padding: 0;
 }
@@ -406,12 +401,12 @@ h3 {
 .new-page-button {
     padding: 6px;
     margin: 4px;
-    border: 1px solid var(--text-color-footer-bacground);
+    border: 1px solid var(--menu-link-color);
 }
 
 .new-page-button a{
     text-decoration: none;
-    color: var(--text-color-footer-bacground);
+    color: var(--menu-link-color);
 }
 
 .new-page-button.selected a,
@@ -419,8 +414,8 @@ h3 {
 .new-page-button:hover a,
 .new-page-button:hover {
     cursor: pointer;
-    background-color: var(--contrast-color);
-    border: 1px solid var(--contrast-color);
+    background-color: var(--menu-link-color-hover);
+    border: 1px solid var(--menu-link-color-hover);
     color: var(--background-color-body);
 }
 
@@ -431,7 +426,7 @@ h3 {
 .input-main {
     font-family: 'Lato', sans-serif;
     font-weight: 400;
-    color: var(--text-color-footer-bacground);
+    color: var(--menu-link-color);
     background-color: var(--background-color-body);
     padding-top: 30px;
 }
@@ -458,7 +453,7 @@ h3 {
 
 .breadcrumb-link {
     text-decoration: none;
-    color: var(--text-color-footer-bacground);
+    color: var(--menu-link-color);
 }
 
 .breadcrumb-link.selected,
@@ -469,7 +464,7 @@ h3 {
 .input-blog {
     padding: 2%;
     margin: 2%;
-    background-color: var(--text-color-white);
+    background-color: var(--fotoer-link-color);
     line-height: 1.4;
 }
 
@@ -478,7 +473,7 @@ h3 {
 }
 
 .input-header {
-    background-color: var(--contrast-color-light);
+    background-color: rgb(229, 225, 254);
 }
 
 .input-header h1 {
@@ -500,7 +495,7 @@ h3 {
     font-size: 0.9rem;
     margin: 0;
     padding: 0px 0 5px 14px;
-    color: var(--text-color-gray);
+    color: rgb(158, 157, 171);
 }
 
 .recents-articles h4 {
@@ -508,11 +503,11 @@ h3 {
     font-size: 0.9rem;
     margin: 0;
     padding: 0px 0 5px 0px;
-    color: var(--text-color-gray);
+    color: rgb(158, 157, 171);
 }
 
 .input-header h4 a {
-    color: var(--text-color-footer-bacground);
+    color: var(--menu-link-color);
     text-decoration: none;
 }
 
@@ -530,7 +525,7 @@ h3 {
 blockquote {
     margin: 3% 0 3% 8%;
     padding-left: 40px;
-    border-left: 3px solid var(--contrast-color);
+    border-left: 3px solid var(--menu-link-color-hover);
 }
 
 blockquote p {
@@ -565,15 +560,15 @@ blockquote cite {
 }
 
 .categories li {
-    border: 1px solid var(--text-color-footer-bacground);
+    border: 1px solid var(--menu-link-color);
     padding: 5px;
     margin: 5px;
 }
 
 .categories li:hover {
     cursor: pointer;
-    border: 1px solid var(--contrast-color);
-    background-color: var(--contrast-color);
+    border: 1px solid var(--menu-link-color-hover);
+    background-color: var(--menu-link-color-hover);
 }
 
 /******************************************************************/
@@ -582,7 +577,7 @@ blockquote cite {
 .videos-main {
     font-family: 'Lato', sans-serif;
     font-weight: 400;
-    color: var(--text-color-footer-bacground);
+    color: var(--menu-link-color);
     background-color: var(--background-color-body);
     padding-bottom: 6%;
 }
@@ -597,8 +592,8 @@ blockquote cite {
 }
 
 .container-video {
-    background-color: var(--text-color-white);
-    border: 1px solid var(--contrast-color-light);
+    background-color: var(--fotoer-link-color);
+    border: 1px solid var(--fotoer-link-color-hover);
     margin: 2%;
 }
 
@@ -699,7 +694,7 @@ blockquote cite {
         height: 42px;
         padding: 10px;
         margin: 8px;
-        border: 1px solid var(--text-color-footer-bacground);
+        border: 1px solid var(--menu-link-color);
     }
 
     /******************************************************************/
@@ -728,6 +723,7 @@ blockquote cite {
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
+
 }
 
 @media (min-width: 992px) {
@@ -767,6 +763,7 @@ blockquote cite {
     .footer-legal-menu li:nth-child(1) {
         border-right: 2px solid white;
     }
+
 
     /******************************************************************/
     /*                            INDEX.HTML                          */
